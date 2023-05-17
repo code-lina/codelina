@@ -1,0 +1,158 @@
+/*media queries*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00938c;
+  font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+  display: inline-flex;
+  margin-left: 1rem;
+}
+
+header .logo a > img {
+  height: 50px;
+  width: auto;
+}
+
+#main-menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#main-menu li {
+  margin: 0 1rem;
+  padding: 0.9rem;
+}
+
+#main-menu a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+#main-menu ul li:hover {
+  background-color: #00605b;
+}
+
+footer p {
+  text-align: left;
+  color: grey;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin: 1rem;
+  margin-top: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+  margin: 0; /*to get rid of default border*/
+  padding: 0;
+  background-color: #232833;
+  color: white;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 0 1rem;
+}
+
+.project1.carousel {
+  grid-area: 1/1/2/2;
+}
+
+.project1.description {
+  grid-area: 1/2/2/3;
+}
+
+.project2.carousel {
+  grid-area: 2/1/3/2;
+}
+
+.project2.description {
+  grid-area: 2/2/3/3;
+}
+
+.project3.carousel {
+  grid-area: 3/1/4/2;
+}
+
+.project3.description {
+  grid-area: 3/2/4/3;
+}
+
+.project4.carousel {
+  grid-area: 4/1/5/2;
+}
+
+.project4.description {
+  grid-area: 4/2/5/3;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+h2 {
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 200;
+}
+
+p {
+  text-align: left;
+  font-family: "PT Serif", serif;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+i {
+  font-size: 0.8rem;
+}
+
+.carousel-img {
+  width: 50%;
+  height: auto;
+  margin: 2rem;
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.8);
+}/*# sourceMappingURL=portfolio.css.map */

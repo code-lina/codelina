@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codelina</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./flickity.css" media="screen">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=PT+Serif&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4ad042a6a9.js" crossorigin="anonymous"></script>
+  <script src="./flickity.pkgd.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="./index.html">
+        <img src="./assets/images/logo.png" alt="logo">
+      </a>
+    </div>
+    <nav id="main-menu">
+      <ul>
+        <li><a href="./placeholder.html">About</a></li>
+        <li><a href="./portfolio.html">Portfolio</a></li>
+        <li><a href="./placeholder.html">Articles</a></li>
+      </un>
+    </nav>
+    <!-- <a href="#" id="menu-icon" onclick="toggleMenu();" style="display: none;"><i class="fa-solid fa-bars"></i></a> -->
+  </header>
+  <div class="container">
+    <section class="section1">
+      <div class="top-heading">
+        <p>Hi, I'm Lina</p>
+        <h1>I design and build <br>
+          Shopify stores</h1>
+      </div>
+      <div class="cta-group">
+        <p>Transform your online store with a Shopify expert. <br>
+           Reach out now to take your e-commerce business to new heights.</p>
+        <div class="cta-button">
+          <a href="#contact-form" id="contact" class="button-main">Contact</a>
+        </div>
+      </div>
+      <div class="social-media">
+        <p>Connect with me</p>
+        <div class="social-media-buttons">
+          <a href="https://www.linkedin.com/in/lina-bourova/" target="_blank" class="button linkedin"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/lina-shopifydev" target="_blank" class="button github"><i class="fab fa-github"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100088836163297" target="_blank" class="button facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div class="top-banner">
+        <img class="banner" src="./assets/images/main-banner.png" alt="shopify developer">
+      </div>
+    </section>
+
+    <section class="section2">
+      <hr>
+      <h2>Some of my latest projects</h2>
+      
+      <!-- carousel -->
+      <div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+        <div class="carousel-cell"><img class="carousel-img" src="./assets/images/TA-mobile.png" alt="shopify store mockup"></div>
+        <div class="carousel-cell"><img class="carousel-img" src="./assets/images/PC-mobile.png" alt="shopify store mockup"></div>
+        <div class="carousel-cell"><img class="carousel-img" src="./assets/images/ML-mobile.png" alt="shopify store mockup"></div>
+      </div>
+      <div class="portfolio-cta">
+        <a href="./portfolio.html" id="portfolio-button" class="button-main">Learn more</a>
+      </div>
+    </section>
+
+    <section class="section3">
+      <div id="contact-form">
+        <form action="mailto:alina.bourova@gmail.com" method="post" enctype="text/plaind">
+          <div class="form-row">
+            <input type='text' name="name" placeholder="Your Name">
+            <input type='email' name="email" placeholder="Your Email">
+          </div>
+          
+          <div class="form-row">
+            <textarea name="message" placeholder="Your Message"></textarea>
+          </div>
+          
+          <div class="form-row">
+            <input type="submit" class="big-button" value="Send message">
+          </div>
+        </form>
+      </div>
+    </section>
+ </div>
+
+  <footer>
+    <p>© 2023 Codelina</p>
+  </footer>
+
+</body>
+
+</html>

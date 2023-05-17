@@ -1,0 +1,44 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-contrast;
+    font-family: $font-primary;
+  }
+  
+  .logo {
+    display: inline-flex;
+    margin-left: 1rem;
+  }
+    
+  header .logo a > img {
+    height: 50px;
+    width: auto;
+  }
+    
+  #main-menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+    
+  #main-menu li {
+    margin: 0 1rem;
+    padding: 0.9rem;
+  }
+  
+  #main-menu a {
+    color: $color-font-bright;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 1rem;
+  }
+    
+  #main-menu ul li:hover {
+    background-color: darken($color-contrast, 10%);
+  }

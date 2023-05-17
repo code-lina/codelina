@@ -1,0 +1,249 @@
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'footer';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+  margin: 0; /*to get rid of default border*/
+  padding: 0;
+  
+}
+
+/* grid container */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr; /* one column */
+  grid-template-rows: repeat(3, auto); /* four rows with height based on content */
+}
+
+.section1 {
+  grid-row: 1; 
+  background-color: $color-bg-primary;
+  color: $color-font-bright;
+  padding-left: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(3, 1fr); /* 3 rows */
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  max-height: 630px;
+
+}
+
+.section2 {
+  grid-row: 2; 
+  background-image: linear-gradient(180deg, $color-bg-primary, $color-bg-secondary); /* dark to light gradient */
+  padding: 2rem 1rem;
+}
+
+.section3 {
+  grid-row: 3; 
+  background-color: $color-bg-secondary;
+}
+
+/* CTA and banner */
+
+.top-banner {
+  grid-area: 1 / 2 / 4 / 2;
+}
+
+img.banner {
+  width: 100%;
+  height: auto;
+}
+
+.top-heading { 
+  grid-area: 1 / 1 / 2 / 2; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.top-heading h1 {
+  font-family: $font-primary;
+  font-size: 3rem;
+}
+
+.top-heading p {
+  font-family: $font-secondary;
+  font-size: 1rem;
+}
+
+.cta-group {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.cta-group p {
+  font-family: $font-secondary;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.button-main {
+  display:inline-block;
+  background-color: $color-contrast;
+  padding: 0.5rem 3rem;
+  color: $color-font-bright;
+  font-family: $font-primary;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+.button-main:hover {
+  background-color: darken($color-contrast, 10%);
+}
+
+/* social media sub-section */
+
+.social-media {
+  grid-area: 3 / 1 / 4 / 2;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.social-media p {
+  font-family: $font-primary;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+}
+
+
+/* social media buttons */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1.5rem;
+  color: $color-contrast;
+  text-decoration: none;
+}
+
+.button i {
+  font-size: 2rem;
+}
+
+/* carousel */
+
+.carousel {
+  display: block;
+  padding: 200px;
+}
+
+.section2 h2 {
+  color: $color-font-bright;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $font-primary;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+hr {
+  border: 1px solid $color-contrast;
+}
+
+// potrfolio section
+
+.portfolio-cta {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* contact form */
+
+#contact-form {
+  max-width: 870px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+input[type=text], input[type=email], textarea { /*input types where assigned because we need to style button differently from them in whole contact form*/
+  color: $color-font-bright; /*applies only for the text which is typed in, but not the placeholder text*/
+  background-color: $color-contrast;
+  border: none;
+  font-size: 1rem;
+  margin: 1rem; 
+  padding-left: 1rem;
+  font-family: $font-primary;
+}
+
+input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, textarea::-moz-placeholder { /*pseudoclass is assigned for a placeholder*/
+  color: $color-font-bright;
+  font-weight: 200;
+  font-size: 1rem;
+  font-family: $font-primary;
+  font-size: inherit;
+}
+
+input[type=text]::placeholder, input[type=email]::placeholder, textarea::placeholder { /*pseudoclass is assigned for a placeholder*/
+  color: $color-font-bright;
+  font-weight: 200;
+  font-size: 1rem;
+  font-family: $font-primary;
+}
+
+input[type=text], input[type=email] {
+  width: 49%; /*so 2 elements can fill the whole page width but will not overlap*/
+  height: 56px;
+}
+
+textarea {
+  height: 200px;
+  width: 100%;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  font-family: $font-primary;
+  font-size: inherit;
+}
+
+.form-row {
+  display: flex; 
+}
+
+input[type=submit] {
+  background-color: $color-contrast;
+  padding: 0.5rem 3rem;
+  text-transform: uppercase;
+  font-family: $font-primary;
+  font-size: 1rem;
+  color: $color-font-bright;
+  border-style: none;
+  margin: 1.2rem auto;
+}
+
+input[type=submit]:hover {
+  background-color: darken($color-contrast, 10%);
+}
+
+// for the placeholder page
+
+.placeholder-txt {
+  font-family: $font-primary;
+  font-size: 2rem;
+  color: $color-font-bright;
+}
